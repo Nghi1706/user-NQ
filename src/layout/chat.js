@@ -4,7 +4,7 @@ import React from 'react'
 const Chat = () => {
     return (
         <MessengerCustomerChat
-            pageID="109178031491375" appID="3046323358944801"
+            pageId="109178031491375" appId="3046323358944801"
         />
     )
 }
