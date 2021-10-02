@@ -7,12 +7,12 @@ import Costs from '../layout/costs'
 function banggia() {
     return (
         <>
-        <Navbar>
-        </Navbar>
-        <img src={image1} class="d-block w-100" alt="Responsive image" />
-        <Costs></Costs>
-        <Footer>
-        </Footer>
+            <Navbar>
+            </Navbar>
+            <img src={image1} class="d-block w-100" alt="Responsive image" />
+            <Costs></Costs>
+            <Footer>
+            </Footer>
         </>
     )
 }

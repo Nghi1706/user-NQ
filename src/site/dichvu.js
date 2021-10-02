@@ -7,13 +7,13 @@ import Service from '../layout/Service'
 function Dichvu() {
     return (
         <>
-        <Navbar>
-        </Navbar>
-        <img src={image1} class="d-block w-100" alt="Responsive image" />
-        <Service>
-        </Service>
-        <Footer>
-        </Footer>
+            <Navbar>
+            </Navbar>
+            <img src={image1} class="d-block w-100" alt="Responsive image" />
+            <Service>
+            </Service>
+            <Footer>
+            </Footer>
         </>
     )
 }

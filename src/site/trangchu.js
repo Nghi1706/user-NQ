@@ -6,7 +6,6 @@ import Service from '../layout/Service'
 import Contact from '../layout/Contact'
 import { Vidtrangchu } from '../layout/Vid'
 import Why from '../layout/Why'
-import Chat from '../layout/chat'
 const trangchu = () => {
 
     return (
@@ -22,7 +21,6 @@ const trangchu = () => {
             <Contact>
             </Contact>
             <Why></Why>
-            <Chat></Chat>
             <Footer>
             </Footer>
         </>
