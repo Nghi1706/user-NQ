@@ -6,6 +6,7 @@ import moment from 'moment'
 import { useDispatch, useSelector } from 'react-redux'
 import * as actions from '../redux/actions';
 import { postsState$ } from '../redux/selectors';
+
 const Contact = () => {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState(0);
@@ -21,21 +22,23 @@ const Contact = () => {
 
     //cai react nay no co phai restart lại khi mà thay đổi code k , ko t cài 
     const datlich = () => {
+        var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
         const today = moment(new Date()).format('YYYY-MM-DD');
-        if (name == '') {
-            alert("bạn chưa nhập tên kìa !");
+        if (name == '' || phone == '' || date == '' || mail == '') {
+            alert("Bạn chưa nhập đủ thông tin")
         }
-        else if (phone != '' && date != '' && mail != '') {
-
-            if (phone.length != 10) {
-                alert("kiểm tra lại số điện thoại bạn nhé !");
-            }
-            else if (date < today) {
+        else {
+            if ((date < today)) {
                 alert("kiểm tra lại ngày khám nhé bạn !");
             }
             else {
-                dispatch(actions.createSchedule.createScheduleRequest(newschedule));
-                alert("Hẹn gặp quý khách tại nha khoa NQ :" + date);
+                if (vnf_regex.test(phone) == false) {
+                    alert("kiểm tra lại số điện thoại bạn nhé !");
+                }
+                else {
+                    dispatch(actions.createSchedule.createScheduleRequest(newschedule));
+                    alert("Hẹn gặp quý khách tại nha khoa NQ :" + date);
+                }
             }
         }
 
