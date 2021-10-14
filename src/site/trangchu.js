@@ -3,9 +3,8 @@ import Navbar from '../layout/Navbar'
 import Slider from '../layout/Slider'
 import Footer from '../layout/Footer'
 import Service from '../layout/Service'
-import Contact from '../layout/Contact'
 import { Vidtrangchu } from '../layout/Vid'
-import Why from '../layout/Why'
+import Details from '../layout/Details'
 const trangchu = () => {
 
     return (
@@ -14,13 +13,10 @@ const trangchu = () => {
             </Navbar>
             <Slider>
             </Slider>
-            <Service>
-            </Service>
             <Vidtrangchu>
             </Vidtrangchu>
-            <Contact>
-            </Contact>
-            <Why></Why>
+            <Details></Details>
+            <Service></Service>
             <Footer>
             </Footer>
         </>
