@@ -16,7 +16,6 @@ const trangchu = () => {
             <Vidtrangchu>
             </Vidtrangchu>
             <Details></Details>
-            <Service></Service>
             <Footer>
             </Footer>
         </>

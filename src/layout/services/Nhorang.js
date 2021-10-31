@@ -10,17 +10,18 @@ import Contact from '../Contact'
 const Nhorang = () => {
     return (
         <>
-        <Navbar>
-        </Navbar>
-        <Vidnhorang>
-        </Vidnhorang>
-        <img src={NR} className="img-fluid mt-2" alt="Responsive image"/>
-        <Why></Why>
-        <Contact></Contact>
-        <Service>
-        </Service>
-        <Footer>
-        </Footer>
+            <Navbar>
+            </Navbar>
+            <Service>
+            </Service>
+            <Vidnhorang>
+            </Vidnhorang>
+            <img src={NR} className="img-fluid mt-2" alt="Responsive image" />
+            <Why></Why>
+            <Contact></Contact>
+
+            <Footer>
+            </Footer>
         </>
     )
 }

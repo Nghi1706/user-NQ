@@ -10,18 +10,19 @@ import Contact from '../Contact'
 const Niengrang = () => {
     return (
         <>
-        <Navbar>
-        </Navbar>
-        <Vidniengrang>
-            
-        </Vidniengrang>
-        <img src={NiR} className="img-fluid mt-2" alt="Responsive image"/>
-        <Why></Why>
-        <Contact></Contact>
-        <Service>
-        </Service>
-        <Footer>
-        </Footer>
+            <Navbar>
+            </Navbar>
+            <Service>
+            </Service>
+            <Vidniengrang>
+
+            </Vidniengrang>
+            <img src={NiR} className="img-fluid mt-2" alt="Responsive image" />
+            <Why></Why>
+            <Contact></Contact>
+
+            <Footer>
+            </Footer>
         </>
     )
 }
