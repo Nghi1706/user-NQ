@@ -30,7 +30,7 @@ export default function Costs() {
                                 return (
                                     <tr>
                                         <td style={{ float: 'left' }} scope="row">_ {val.name}</td>
-                                        <td >{val.cost}</td>
+                                        <td >{val.cost.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</td>
                                     </tr>
                                 )
                             })
