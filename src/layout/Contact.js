@@ -11,11 +11,15 @@ const Contact = () => {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState(0);
     const [date, setDate] = useState("");
-    const [mail, setMail] = useState("");
+    const [mailer, setMail] = useState("");
     const newschedule = ({
         name: name,
         phone: phone,
-        mail: mail,
+        mail: mailer,
+        date: date,
+    })
+    const mail = ({
+        mail: mailer,
         date: date,
     })
     const dispatch = useDispatch();
@@ -24,7 +28,7 @@ const Contact = () => {
     const datlich = () => {
         var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
         const today = moment(new Date()).format('YYYY-MM-DD');
-        if (name == '' || phone == '' || date == '' || mail == '') {
+        if (name == '' || phone == '' || date == '' || mailer == '') {
             alert("Bạn chưa nhập đủ thông tin")
         }
         else {
@@ -38,11 +42,22 @@ const Contact = () => {
                 else {
                     dispatch(actions.createSchedule.createScheduleRequest(newschedule));
                     alert("Hẹn gặp quý khách tại nha khoa NQ :" + date);
+                    smail();
                 }
             }
         }
 
 
+    }
+    const smail = async () => {
+
+        await fetch("https://nqguimail.herokuapp.com/sendmail_user", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify({ mail }),
+        })
     }
     return (
         <section>
